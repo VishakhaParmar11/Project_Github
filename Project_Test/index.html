@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Landing Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7fc;
+color:#333;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0f172a;
+padding:18px 0;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+nav .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#fff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+background:linear-gradient(135deg,#2563eb,#0f172a);
+color:white;
+}
+
+.hero .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:30px;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#fff;
+color:#2563eb;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#38bdf8;
+color:white;
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:500px;
+}
+
+/* Section */
+
+section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#0f172a;
+}
+
+/* About */
+
+.about-content{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text h3{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.about-text p{
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.about-image{
+flex:1;
+}
+
+.about-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+transition:.4s;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin:15px 0;
+color:#2563eb;
+}
+
+/* Contact */
+
+.contact{
+background:#0f172a;
+color:white;
+}
+
+.contact-wrapper{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:40px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+}
+
+input,textarea{
+padding:15px;
+margin-bottom:20px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+button{
+padding:15px;
+background:#38bdf8;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#2563eb;
+}
+
+.contact-info h3{
+margin-bottom:20px;
+}
+
+.contact-info p{
+margin:15px 0;
+}
+
+/* Footer */
+
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding-top:100px;
+height:auto;
+}
+
+.hero .container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.about-content{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+<div class="logo">TechCompany</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-text">
+
+<h1>Build Your Dream Website</h1>
+
+<p>
+We create modern, responsive and professional websites
+that help businesses grow faster in the digital world.
+</p>
+
+<a href="#contact" class="btn">Get Started</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about-content">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700" alt="">
+
+</div>
+
+<div class="about-text">
+
+<h3>We Build Amazing Digital Products</h3>
+
+<p>
+Our experienced team specializes in web development,
+UI/UX design, mobile applications, and cloud solutions.
+We deliver high-quality software tailored to your business needs.
+</p>
+
+<p>
+✔ Professional Team<br>
+✔ Fast Delivery<br>
+✔ 24/7 Support<br>
+✔ Modern Technologies
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💻 Web Development</h3>
+<p>Responsive websites using HTML, CSS, JavaScript, React and Django.</p>
+</div>
+
+<div class="card">
+<h3>📱 Mobile Apps</h3>
+<p>Android and iOS applications with modern technologies.</p>
+</div>
+
+<div class="card">
+<h3>☁ Cloud Solutions</h3>
+<p>Cloud deployment, Docker, DevOps and scalable infrastructure.</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Solutions</h3>
+<p>AI-powered automation, analytics dashboards and smart applications.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2 class="section-title" style="color:white;">Contact Us</h2>
+
+<div class="contact-wrapper">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Phone Number">
+
+<textarea placeholder="Write your message..."></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+<div class="contact-info">
+
+<h3>Get In Touch</h3>
+
+<p>📍 Surat, Gujarat, India</p>
+
+<p>📞 +91 9876543210</p>
+
+<p>📧 info@techcompany.com</p>
+
+<p>🌐 www.techcompany.com</p>
+
+<p>
+We're always ready to discuss your next project.
+Let's create something amazing together.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 TechCompany | All Rights Reserved
+
+</footer>
+
+</body>
+</html>
